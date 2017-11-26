@@ -8,7 +8,7 @@
         <view class="rt">
           <view class="title hidden">{{item.title}}</view>
           <view class="con hiddens">{{item.con}}</view>
-          <view class="score" bindtap="fSort">{{item.score}}</view>
+          <view class="score">{{item.score}}</view>
           <view class="time">{{item.time}}</view>
         </view>
       </navigator>

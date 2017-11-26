@@ -1,0 +1,38 @@
+<view class="detail">
+  <swiper indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image style="width: 100%;" src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--标题和收藏-->
+  <view class="title_coloect">
+    <view wx:for="{{title}}" wx:key="index" class="detail_title hidden">
+      {{item.title}}
+    </view>
+    <view class="coloect">
+      <image src="../../../images/coloect.png"></image>
+    </view>
+  </view>
+  <!--简介-->
+  <view class="content">
+    <view wx:for="{{content}}" wx:key="index">
+      <!--{{item.title}}-->
+      <import src="../../../wxParse/wxParse.wxml"/>
+      <template is="wxParse" data="{{wxParseData:content.title.nodes}}"/>
+    </view>
+    <view class="introduction">
+      <view>◎简    介</view>
+      <view wx:for="{{introduction}}" wx:key="index">{{item.content}}</view>
+    </view>
+  </view>
+  <!--下载-->
+  <view>
+    <view>磁力</view>
+    <block wx:for="{{downLoad}}" wx:key="index">
+      <navigator  hover-class="none" >{{item.content}}</navigator>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+.information{
+  box-sizing: border-box;
+  width: 100%;
+  text-align: center;
+}
+.phone{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.name{
+  text-align: left;
+  width: 120px;
+  padding-left: 5%;
+  display: inline-block;
+  height: 80px;
+  line-height: 80px;
+}
+.my-coll{
+  width: 100%;
+  padding: 3%;
+  box-sizing: border-box;
+}
+.my-coll image{
+  width: 18px;
+  height: 18px;
+  float: right;
+}
