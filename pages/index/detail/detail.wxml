@@ -28,10 +28,11 @@
 </view>
 
   <!--下载-->
-<view wx:for="{{downLoad}}" wx:key="index">
-    <view >{{item.name}}</view>
+<view wx:for="{{content.downloadUrl}}" wx:key="index">
+    <view >{{item.desc.name}}</view>
     <block>
-      <navigator  hover-class="none" >{{item.thumb}}</navigator>
+      <text>{{item.name}}</text>
+      <input style="background-color:#eeeeee"  disabled  value="{{item.url}}"/>
     </block>
   </view>
 </view>

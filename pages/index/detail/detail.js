@@ -26,7 +26,7 @@ Page({
       title: content.name
     })
   },
-// 保存
+// 收藏
   collect: function (event) {
     var item = event.currentTarget.dataset.item
     wx.getStorage({
@@ -39,9 +39,6 @@ Page({
             key: "collect",
             data: item
           })
-          // wx.navigateTo({
-          //   url:event.currentTarget.dataset.url
-          // })
           console.log(event);
         } else {
           wx.showToast({
