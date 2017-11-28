@@ -2,7 +2,7 @@
   <!--标题和收藏-->
   <view class="title_coloect">
 
-    <view class="detail_title" >
+    <view class="detail_title">
       <view class="coloect" data-item="{{content}}" bindtap="collect">
         <image src="../../../images/coloect.png"></image>
       </view>
@@ -11,9 +11,9 @@
     </view>
   </view>
 
-  <view >
+  <view>
     <block wx:for="{{content.images}}" wx:key="index">
-      <image data-url="{{item}}" bindtap="previewImage" style="width: 100%;" mode="widthFix"  src="{{item}}"></image>
+      <image data-url="{{item}}" bindtap="previewImage" style="width: 100%;" mode="widthFix" src="{{item}}"></image>
     </block>
   </view>
 
@@ -25,14 +25,21 @@
       <template is="wxParse" data="{{wxParseData:content.more.nodes}}"/>
     </view>
 
-</view>
+  </view>
 
   <!--下载-->
-<view wx:for="{{content.downloadUrl}}" wx:key="index">
-    <view >{{item.desc.name}}</view>
+  <view style="font-weight: bold;">下载地址(长按链接复制) :</view>
+  <view wx:for="{{content.downloadUrl}}" wx:key="index">
+    <view style="color: red;">{{item.name}}</view>
     <block>
-      <text>{{item.name}}</text>
-      <input style="background-color:#eeeeee"  disabled  value="{{item.url}}"/>
+      <view>
+        <text>{{item.desc.name}}: </text>
+        <text selectable="true" style="background-color: #eeeeee;">{{item.url}}</text>
+      </view>
+      <view wx:if="{{item.password}}">
+        <text >密码：</text>
+        <text style="background-color: #eeeeee;" selectable="true">{{item.password}}</text>
+      </view>
     </block>
   </view>
 </view>

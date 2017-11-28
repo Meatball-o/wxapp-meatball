@@ -34,7 +34,6 @@ Page({
       success: function (res) {
         console.log(res.data)
         if (res.data) {
-          // TODO 判断当前电影是否已经收藏
           wx.setStorage({
             key: "collect",
             data: item
