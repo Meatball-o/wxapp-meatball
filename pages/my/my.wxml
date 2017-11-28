@@ -1,12 +1,12 @@
 <view class="mb-my">
   <!--用户信息-->
-  <view class="information" wx:for="{{phone}}" wx:key="index">
-    <image class="phone" src="{{item.image}}"></image>
-    <view class="name">用户名</view>
+  <view class="information" wx:if="userInfo">
+    <image class="phone" src="{{userInfo.avatarUrl}}"></image>
+    <view class="name">{{userInfo.nickName}}</view>
   </view>
   <!--我的收藏-->
   <view class="collection">
-    <navigator url="Collection/Collection" class="my-coll">我的收藏
+    <navigator url="collection/collection" class="my-coll">我的收藏
       <image src="../../images/jt.png"></image>
     </navigator>
   </view>

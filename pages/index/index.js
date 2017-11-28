@@ -1,33 +1,72 @@
 //detail.js
 //获取应用实例
+var utils = require('../../utils/util.js');
+
 const app = getApp()
 Page({
   data: {
-    content: [
-      {
-        imgUrls: "../../images/tooopen_sy_143912755726.jpg",
-        title: "蜡笔小新：外星人噼噼怪来袭！！",
-        con: "某天晚上，因为看了电视上的科学节目，而向流星许愿的野原一家，在他们面前突然出现了太空船！的小英雄吗？可以帮助爸爸妈妈变回原来的样子吗？",
-        score: "4.0",
-        time: "2017-7-11"
-      },
-      {
-        imgUrls: "../../images/tooopen_sy_175833047715.jpg",
-        title: "蜡笔小新：外星人噼噼怪来袭！！",
-        con: "某天晚上，因为看了电视上的科学节目，而向流星许愿的野原一家，在他们面前突然出现了太空船！的小英雄吗？可以帮助爸爸妈妈变回原来的样子吗？",
-        score: "4.8",
-        time: "2017-8-11"
-      },
-      {
-        imgUrls: "../../images/tooopen_sy_175866434296.jpg",
-        title: "蜡笔小新：外星人噼噼怪来袭！！",
-        con: "某天晚上，因为看了电视上的科学节目，而向流星许愿的野原一家，在他们面前突然出现了太空船！的小英雄吗？可以帮助爸爸妈妈变回原来的样子吗？",
-        score: "4.3",
-        time: "2017-9-11"
-      }
-    ]
+    content: []
   },
-  fSort: function () {
+  onLoad: function () {
+    var that = this
+    wx.showLoading({
+      title: '加载中',
+    })
+    wx.request({
+      url: 'https://gitee.com/heiliuer/wxapp-meatball-backend/raw/master/api/v1/movies.json',
+      data: {},
+      header: {
+        'content-type': 'application/json'
+      },
+      success(res) {
+        console.log({
+          data: res.data,
+          isStr: typeof res.data
+        });
+        if (typeof res.data == 'string') {
+          res.data = JSON.parse(res.data)
+        }
+        console.log(res.data.data)
+        const content = res.data.data;
+        content.forEach(
+          d => d.listDesc = (d.desc || '').trim()
+        )
+        that.setData({content})
+      },
+      fail(){
+        wx.showToast({
+          title: '获取数据失败 ',
+          icon: 'error',
+          duration: 2000
+        })
+        console.log(arguments)
+      },
+      complete(){
+        wx.hideLoading()
+      }
+    })
+
+  },
+  jumpDetail: function (event) {
+    wx.setStorage({
+      key: "content",
+      data: event.currentTarget.dataset.item
+    })
+    wx.navigateTo({
+      url: event.currentTarget.dataset.url
+    })
+    console.log(event);
+  },
+  previewImage: function (e) {
+    var current=e.target.dataset.url;
+    var content=this.data.content;
+    var urls=content.map(function (item) {
+      return item.thumb
+    })
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接
+      urls:urls // 需要预览的图片http链接列表
+    })
   }
 })
 

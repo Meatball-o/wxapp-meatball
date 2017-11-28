@@ -11,7 +11,7 @@
 }
 .name{
   text-align: left;
-  width: 120px;
+  width: 50%;
   padding-left: 5%;
   display: inline-block;
   height: 80px;

@@ -1,18 +1,22 @@
-view{
+view {
   font-size: 15px;
-  font-family: Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
+
 .mb-list {
   width: 100%;
   box-sizing: border-box;
 }
-
-.mb_list_right > navigator{
-  margin: 2% 2% ;
-  border-bottom: 1px solid #bbb;
+.right_content{
+  border-bottom: 1rpx solid #eee;
+margin-bottom: 2%;
 }
-.mb_list_right > navigator:last-child{
-  border-bottom: 1px solid transparent;
+.mb_list_right > navigator {
+  margin: 2% 2%;
+}
+
+.mb_list_right > navigator:last-child {
+  border-bottom: 1rpx solid transparent;
 }
 
 .mb_list_right {
@@ -28,14 +32,15 @@ view{
   display: inline-block;
   box-sizing: border-box;
   width: 70%;
-  height: 100px;
+  height: 130px;
   vertical-align: top;
   padding: 1% 5%;
+  overflow: visible;
 }
 
 .mb_images {
-  width: 100%;
-  height: 100px;
+  width: 230rpx;
+  height: 328rpx;
 }
 
 .hidden {
@@ -45,22 +50,25 @@ view{
 }
 
 .hiddens {
+  height: 78px;
   display: -webkit-box;
   color: #000000;
   word-break: break-all;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp:4;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .mb_list_right .title {
+  font-weight: bold;
+  color: #333;
   width: 80%;
   padding-bottom: 1%;
 }
 
 .mb_list_right .con {
-  /*text-indent: 28px;*/
+  color: #3C3F41;
 }
 
 .right_content .score, .right_content .time {
@@ -69,13 +77,17 @@ view{
 }
 
 .score {
-  /*padding-top: 2%;*/
   color: red;
-  font-size: 20px;
+  font-size: 24px;
+  font-style: italic;
   padding-right: 10%;
 }
 
 .time {
   /*text-align: right;*/
   float: right;
+  color: #666666;
+  font-size: 0.9em;
+  position: relative;
+  top: 12rpx;
 }

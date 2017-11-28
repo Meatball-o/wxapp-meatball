@@ -1,31 +1,41 @@
-view{
+view {
   font-size: 14px;
-  font-family: Arial,"PingFang SC","Hiragino Sans GB",STHeiti,"Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  padding-bottom: 8px;
+  font-family: Arial, "PingFang SC", "Hiragino Sans GB", STHeiti, "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
-.detail{
+
+.detail {
   width: 100%;
 }
+
 .hidden {
   width: 70%;
-  padding-right: 10%;
+  padding-right: 22%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.detail_title,.coloect {
-display: inline-block;
+.title_coloect .detail_title {
+  font-size: 16px;
 }
-.title_coloect{
+.title_coloect {
   font-weight: bold;
   box-sizing: border-box;
   padding: 1% 2%;
   margin-top: 10px;
 }
-.coloect image{
-  width: 18px;
-  height: 18px;
+.coloect{
+  display: inline-block;
+  float: right;
+  margin-left: 14rpx;
 }
-.content{
+
+.coloect image {
+  width: 20px;
+  height: 20px;
+}
+
+.content {
   box-sizing: border-box;
   padding: 0 2%;
 }

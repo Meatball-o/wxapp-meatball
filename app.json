@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my",
     "pages/index/detail/detail",
-    "pages/logs/logs",
-    "pages/my/Collection/Collection"
+    "pages/my/my",
+    "pages/my/collection/collection",
+    "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",

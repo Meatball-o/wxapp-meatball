@@ -1,17 +1,20 @@
 <view class="mb-list">
   <view   class="mb_list_right" >
     <block wx:for="{{content}}" wx:key="index">
-      <navigator url="detail/detail" hover-class="none" class="right_content">
+      <view class="right_content">
         <view class="lf">
-          <image class="mb_images" src="{{item.imgUrls}}"></image>
+          <image data-url="{{item.thumb}}" bindtap="previewImage" class="mb_images" src="{{item.thumb}}"></image>
         </view>
-        <view class="rt">
-          <view class="title hidden">{{item.title}}</view>
-          <view class="con hiddens">{{item.con}}</view>
-          <view class="score" bindtap="fSort">{{item.score}}</view>
-          <view class="time">{{item.time}}</view>
+        <view data-url="detail/detail" data-item="{{item}}" hover-class="none"   class="rt"  bindtap="jumpDetail">
+          <view class="title hidden">{{item.name}}</view>
+          <view class="con hiddens">{{item.listDesc}}</view>
+          <view>
+            <view class="score" bindtap="fSort">
+              {{item.score}}</view>
+            <view class="time">{{item.dateStr}}</view>
+          </view>
         </view>
-      </navigator>
+      </view>
     </block>
   </view>
 </view>

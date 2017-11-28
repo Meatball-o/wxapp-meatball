@@ -1,38 +1,37 @@
 <view class="detail">
-  <swiper indicator-dots="{{indicatorDots}}"
-          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="index">
-      <swiper-item>
-        <image style="width: 100%;" src="{{item}}" class="slide-image"/>
-      </swiper-item>
-    </block>
-  </swiper>
   <!--标题和收藏-->
   <view class="title_coloect">
-    <view wx:for="{{title}}" wx:key="index" class="detail_title hidden">
-      {{item.title}}
-    </view>
-    <view class="coloect">
-      <image src="../../../images/coloect.png"></image>
+
+    <view class="detail_title" >
+      <view class="coloect" data-item="{{content}}" bindtap="collect">
+        <image src="../../../images/coloect.png"></image>
+      </view>
+      {{content.title}}
+      <view style="clear: both;width: 100%;"></view>
     </view>
   </view>
+
+  <view >
+    <block wx:for="{{content.images}}" wx:key="index">
+      <image data-url="{{item}}" bindtap="previewImage" style="width: 100%;" mode="widthFix"  src="{{item}}"></image>
+    </block>
+  </view>
+
+
   <!--简介-->
   <view class="content">
-    <view wx:for="{{content}}" wx:key="index">
-      <!--{{item.title}}-->
+    <view>
       <import src="../../../wxParse/wxParse.wxml"/>
-      <template is="wxParse" data="{{wxParseData:content.title.nodes}}"/>
+      <template is="wxParse" data="{{wxParseData:content.more.nodes}}"/>
     </view>
-    <view class="introduction">
-      <view>◎简    介</view>
-      <view wx:for="{{introduction}}" wx:key="index">{{item.content}}</view>
-    </view>
-  </view>
+
+</view>
+
   <!--下载-->
-  <view>
-    <view>磁力</view>
-    <block wx:for="{{downLoad}}" wx:key="index">
-      <navigator  hover-class="none" >{{item.content}}</navigator>
+<view wx:for="{{downLoad}}" wx:key="index">
+    <view >{{item.name}}</view>
+    <block>
+      <navigator  hover-class="none" >{{item.thumb}}</navigator>
     </block>
   </view>
 </view>

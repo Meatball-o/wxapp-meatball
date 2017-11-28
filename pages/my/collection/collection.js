@@ -2,6 +2,8 @@
 //detail.js
 //获取应用实例
 const app = getApp()
+var WxParse = require('../../../wxParse/wxParse.js');
+
 Page({
   data: {
     content:[
@@ -27,6 +29,16 @@ Page({
         time:"2017-9-11"
       }
     ]
+  },
+  onLoad: function (event) {
+    console.log('onLoad');
+    var that = this
+    var content = wx.getStorageSync('content')
+    if (content) {
+      that.setData({content})
+    }
+    WxParse.wxParse('content.more', 'html', content.more, that, 5);
+    console.log(that.data)
   },
 })
 
