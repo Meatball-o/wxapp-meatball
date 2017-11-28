@@ -28,7 +28,7 @@
   </view>
 
   <!--下载-->
-  <view style="font-weight: bold;">下载地址(长按链接复制) :</view>
+  <view style="font-weight: bold;">下载地址(长按链接复制,可使用迅雷影音边下边播) :</view>
   <view wx:for="{{content.downloadUrl}}" wx:key="index">
     <view style="color: red;">{{item.name}}</view>
     <block>
