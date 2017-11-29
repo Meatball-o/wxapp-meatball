@@ -50,7 +50,7 @@ margin-bottom: 2%;
 }
 
 .hiddens {
-  height: 78px;
+  height: 84px;
   display: -webkit-box;
   color: #000000;
   word-break: break-all;
