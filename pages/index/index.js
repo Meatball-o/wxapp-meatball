@@ -13,7 +13,7 @@ Page({
       title: '加载中',
     })
     wx.request({
-      url: 'https://gitee.com/heiliuer/wxapp-meatball-backend/raw/master/api/v1/movies.json',
+      url: 'https://heiliuer.com/crawler/api/6v/video',
       data: {},
       header: {
         'content-type': 'application/json'
@@ -27,9 +27,13 @@ Page({
           res.data = JSON.parse(res.data)
         }
         console.log(res.data.data)
-        const content = res.data.data;
+        const content = res.data.data.docs;
+
         content.forEach(
-          d => d.listDesc = (d.desc || '').trim()
+          function (d) {
+            d.docs = (d.docs || '').trim()
+          }
+          // d => d.listDesc = (d.desc || '').trim()
         )
         that.setData({content})
       },
