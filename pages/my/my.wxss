@@ -1,29 +1,74 @@
-.information{
-  box-sizing: border-box;
+.my{
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.my navigator{
+  height: 88rpx;
+  line-height: 88rpx;
+  position: relative;
+  padding-left: 60rpx;
+  font-size: 32rpx;
+}
+.my navigator .iconfont:first-child{
+  position: absolute;
+  top:-2rpx;
+  left: 0rpx;
+  font-weight: bold;
+}
+.favorite .iconfont:first-child{
+  font-size: 42rpx;
+  color: #E98071;
+}
+.history .iconfont:first-child{
+  font-size: 40rpx;
+  color: #B2D55D;
+}
+.business .iconfont:first-child{
+  font-size: 35rpx;
+  color: #F095A3;
+}
+.feedback .iconfont:first-child{
+  font-size: 35rpx;
+  color: #8CC9BC;
+}
+
+.personal-info{
+  width: 750rpx;
+  height: 360rpx;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
 }
-.phone{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: inline-block;
+.personal-info .s-image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 99;
+  top: 100rpx;
+  left: 30rpx;
 }
-.name{
-  text-align: left;
-  width: 50%;
-  padding-left: 5%;
-  display: inline-block;
-  height: 80px;
-  line-height: 80px;
-}
-.my-coll{
-  width: 100%;
-  padding: 3%;
+.personal-info .py-name{
+  width: 660rpx;
   box-sizing: border-box;
+  position: absolute;
+  text-align: left;
+  z-index: 90;
+  top: 100rpx;
+  left: 90rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 80rpx;
+  background-color: rgba(255, 255, 255, 0.32);
 }
-.my-coll image{
-  width: 18px;
-  height: 18px;
-  float: right;
+.personal-info .b-image{
+  width: 750rpx;
+  height: 360rpx;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
 }

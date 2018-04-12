@@ -5,15 +5,7 @@
       请输入关键字搜索
     </navigator>
   </view>
-  <swiper class="mb-list-swiper" indicator-dots="{{indicatorDots}}"
-          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block>
-      <swiper-item>
-        <image src="{{content.images}}" class="slide-image" width="355" height="150"/>
-      </swiper-item>
-    </block>
-  </swiper>
-  <view class="mb-list-toggle cf ui-border-b">
+  <view class="mb-list-toggle cf ui-border-b"style="margin-top: 0">
     <view class="time lf" >
       <text class="active">时间</text>
       <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
@@ -25,7 +17,7 @@
     <view class="index-list-con cf"wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}" hover-class="none"  bindtap="jumpDetail" wx:key="index">
       <text class="iconfont icon-new2 lf"></text>
       <text class="index-list-title hidden lf">{{index+1}}. {{item.title}}</text>
-      <text class="index-list-score rt">{{item.score}}</text>
+      <text class="index-list-score rt">1.0</text>
     </view>
   </view>
   <view class="footer-border ui-border-b"></view>

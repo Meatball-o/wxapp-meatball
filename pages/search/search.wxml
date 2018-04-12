@@ -1,0 +1,20 @@
+<!--search.wxml-->
+<view class="search">
+  <view class="search-con  ui-border-tb ui-border-l cf">
+    <text class="iconfont icon-sousuo"></text>
+    <input class="lf"  placeholder="请输入关键字搜索" confirm-type="search" bindinput="bindInput" auto-focus/>
+    <navigator class="lf  ui-border-l" url="/pages/goods/goods?key={{key}}" hover-class="none">搜索</navigator>
+  </view>
+  <view class="search-hot">
+    <view class="vm-detail-t">
+      <text>链接</text>
+    </view>
+    <view class="search-hot-class">
+      <navigator>头号玩家</navigator>
+      <navigator>你说的都会 第一季</navigator>
+      <navigator>甄嬛传</navigator>
+      <navigator>你说的都会 第一季</navigator>
+      <navigator>甄嬛传</navigator>
+    </view>
+  </view>
+</view>

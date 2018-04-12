@@ -1,15 +1,11 @@
 //index.js
 //获取应用实例
-var WxParse = require('../../../wxParse/wxParse.js');
+var WxParse = require('../../wxParse/wxParse.js');
 const app = getApp()
 
 Page({
   data: {
     content: null,
-    indicatorDots: true,
-    autoplay: true,
-    interval: 2000,
-    duration: 1000
   },
   // 获取
   onLoad: function (event) {
@@ -26,6 +22,20 @@ Page({
       title: content.name
     })
   },
+  // previewImage(event) {
+  //   var vm = this
+  //   var url = event.currentTarget.dataset.url
+  //   var imgArr = vm.data.houseDetail.images.map(function (img, index) {
+  //     return img.url
+  //   })
+  //   // houseDetail = houseDetail.split(",");
+  //   // console.log(houseDetail);
+  //   wx.previewImage({
+  //     current: url, // 当前显示图片的http链接
+  //     urls: imgArr // 需要预览的图片http链接列表
+  //   })
+  // },
+
 // 收藏
   collect: function (event) {
     var item = event.currentTarget.dataset.item
@@ -48,16 +58,19 @@ Page({
       }
     })
   },
-  // 图片预览
-  previewImage: function (e) {
-    var current=e.target.dataset.url;
-    var urls=this.data.content.images;
-    // var urls=content.map(function (item) {
-    //   return item.thumb
-    // })
-    wx.previewImage({
-      current: current, // 当前显示图片的http链接
-      urls:urls // 需要预览的图片http链接列表
+  // 复制
+  setClipboardData: function (event) {
+    var vm=this
+    var url = event.currentTarget.dataset.url
+    wx.setClipboardData({
+      data: url,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            console.log(res.data) // data
+          }
+        })
+      }
     })
   }
 })

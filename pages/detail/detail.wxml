@@ -1,0 +1,126 @@
+<view class="goods-detail">
+  <view class="wm-detail">
+    <view class="detail-bg"></view>
+    <view class="wm-detail-header cf" >
+      <view class="detail-bc"  style="background-image: url({{content.thumb}})"></view>
+      <view class="wm-detail-lf lf">
+        <image src="{{content.thumb}}"></image>
+      </view>
+      <view class="wm-detail-rt lf">
+        <text class="wm-detail-title">{{content.name}}</text>
+        <text class="wm-detail-director">导演：斯蒂文</text>
+        <text class="wm-detail-performer hiddens">演员：ff </text>
+        <text class="wm-detail-region">地区：龙华新区</text>
+        <text class="wm-detail-score">评分：<text>5.0</text></text>
+        <text class="wm-detail-createtime">上映时间：{{content.createTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="goods-d-explain ui-border-b">
+    <view class="goods-d-price-con ui-border-r">
+      <text>9999</text>
+      <text>看过</text>
+    </view>
+    <view class="goods-d-layout-con ui-border-r">
+      <text>9999</text>
+      <text>想看</text>
+    </view>
+    <view class="goods-d-big-con">
+      <text>9999</text>
+      <text>评分人数</text>
+    </view>
+  </view>
+  <view class="wm-detail-character">
+    <view class="vm-detail-t">
+      <text>导演/演员</text>
+    </view>
+    <view class="sell-door-con">
+      <view class="sell-door-con-ov">
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+        <view class="sell-door-list">
+          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{content.thumb}}"></image>
+          <view class="sell-door-list-explain">
+            <text>meatball丸子</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="wm-detail-synopsis">
+    <view class="vm-detail-t">
+      <text>剧情简介</text>
+    </view>
+    <view class="wm-detail-synopsis-desc">
+      {{content.desc}}
+    </view>
+  </view>
+  <view class="wm-detail-url">
+    <view class="vm-detail-t">
+      <text>链接</text>
+    </view>
+    <view class="wm-detail-url-con">
+      <view class="goods-detail-sj cf" wx:for="{{content.downloadUrl}}">
+        <view class="lf">迅雷</view>
+        <text class="goods-detail-url hidden lf" selectable="true">{{item.url}}</text>
+        <button class="rt" data-url="{{item.url}}" bindtap="setClipboardData">复制</button>
+      </view>
+    </view>
+  </view>
+  <view class="wm-detail-lable">
+    <view class="vm-detail-t">
+      <text>标签</text>
+    </view>
+    <view class="wm-detail-lable-list">
+      <text>动作</text>
+      <text>科幻</text>
+      <text>动作</text>
+    </view>
+  </view>
+</view>

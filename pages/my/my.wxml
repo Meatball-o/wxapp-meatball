@@ -1,13 +1,31 @@
-<view class="mb-my">
-  <!--用户信息-->
-  <view class="information" wx:if="userInfo">
-    <image class="phone" src="{{userInfo.avatarUrl}}"></image>
-    <view class="name">{{userInfo.nickName}}</view>
+<view>
+  <view class="personal-info" wx:if="userInfo">
+    <image class="s-image" src="{{userInfo.avatarUrl}}"></image>
+    <view class="b-image" style="background-image: url({{userInfo.avatarUrl}})"></view>
+    <view class="py-name">{{userInfo.nickName}}</view>
   </view>
-  <!--我的收藏-->
-  <view class="collection">
-    <navigator url="collection/collection" class="my-coll">我的收藏
-      <image src="../../images/jt.png"></image>
+  <view class="my">
+    <navigator class="cf favorite ui-border-b" url="/pages/favorite/favorite" hover-class="none">
+      <text class="iconfont icon-shoucang2"></text>
+      我的收藏
+      <text class="iconfont icon-youjiantou1 rt"></text>
+    </navigator>
+    <navigator class="cf history ui-border-b" url="/pages/history/history" hover-class="none">
+      <text class="iconfont icon-zuji"></text>
+      我的足迹
+      <text class="iconfont icon-youjiantou1 rt"></text>
+    </navigator>
+    <navigator class="cf business ui-border-b" url="/pages/business/business" hover-class="none">
+      <text class="iconfont icon-shangjia"></text>
+      关于商家
+      <text class="iconfont icon-youjiantou1  rt"></text>
+    </navigator>
+    <navigator class="cf feedback" url="/pages/feedback/feedback" hover-class="none">
+      <text class="iconfont icon-yijianfankui2"></text>
+      用户反馈
+      <text class="iconfont icon-youjiantou1 rt">
+        <text class="iconfont "></text>
+      </text>
     </navigator>
   </view>
 </view>

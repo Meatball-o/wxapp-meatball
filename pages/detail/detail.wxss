@@ -1,0 +1,197 @@
+.goods-detail{
+  width: 750rpx;
+  background-color: #fff;
+  position: relative;
+}
+.wm-detail-url{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.goods-detail-sj{
+  width: 100%;
+}
+.goods-detail-sj view{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.goods-detail-sj .goods-detail-url{
+  display: block;
+  width: 80%;
+  height: 50rpx;
+  line-height: 50rpx;
+  box-sizing: border-box;
+  border-radius: 6rpx;
+}
+.wm-detail-url-con{
+  padding: 20rpx 0;
+}
+.goods-detail-sj button{
+  width: 108rpx;
+  background-color:#1AAD19 ;
+  color: #fff;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+}
+.detail-bg{
+  width: 750rpx;
+  height: 456rpx;
+ background-color: #585858;
+  opacity: 0.8;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 10;
+}
+.wm-detail-header{
+  width: 750rpx;
+  height: 456rpx;
+  box-sizing: border-box;
+  color: #fff;
+}
+.detail-bc{
+  width: 750rpx;
+  height: 456rpx;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=30, MakeShadow=false);
+}
+.wm-detail-lf{
+  width: 45%;
+  box-sizing: border-box;
+  padding: 40rpx 0 40rpx 40rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 20;
+}
+.wm-detail-lf image{
+  width: 268rpx;
+  height: 370rpx;
+  border-radius: 8rpx;
+}
+.wm-detail-rt>text{
+  display: block;
+}
+.wm-detail-rt{
+  width: 55%;
+  box-sizing: border-box;
+  padding: 40rpx 40rpx 40rpx 0;
+  position: absolute;
+  top:0;
+  right: 0;
+  z-index: 20;
+
+
+}
+.wm-detail-rt .wm-detail-title{
+  font-weight: bold;
+  font-size: 32rpx;
+  padding-bottom: 11rpx;
+}
+.wm-detail-rt .wm-detail-performer{
+  display:-webkit-box;
+  padding: 11rpx 0;
+}
+.wm-detail-rt .wm-detail-score{
+  padding: 11rpx 0;
+}
+/*.wm-detail-rt .wm-detail-score text{*/
+  /*color: red;*/
+  /*font-weight: bold;*/
+/*}*/
+.goods-d-explain{
+  width: 100%;
+  padding: 24rpx 0;
+  box-sizing: border-box;
+  color: #aaa;
+  z-index: 200;
+}
+.goods-d-explain view{
+  width: 33%;
+  display: inline-block;
+  text-align: center;
+}
+.goods-d-explain view>text{
+  display: block;
+  color: #aaa;
+}
+.goods-d-explain view>text:first-child{
+  font-weight: bold;
+  padding-bottom: 8rpx;
+  color: #000;
+}
+.wm-detail-character{
+  width:750rpx;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx 0 30rpx;
+}
+.sell-door-con{
+  width: 100%;
+  padding:20rpx 0;
+  box-sizing: border-box;
+}
+.sell-door-con-ov{
+  display: flex;
+  background-color: white;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling:touch;
+}
+.sell-door-list{
+  float: left;
+  padding-right: 20rpx;
+}
+.sell-door-list:last-child{
+  padding-right:0;
+}
+.sell-door-list image{
+  float: left;
+  width:140rpx;
+  height: 180rpx;
+}
+.sell-door-list-explain text{
+  display: inline-block;
+  font-size: 24rpx;
+  color: #aaa;
+  text-align: center;
+}
+.wm-detail-synopsis{
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.wm-detail-synopsis-desc{
+  font-size: 26rpx;
+  color: #aaa;
+  line-height: 46rpx;
+  width: 100%;
+  padding: 20rpx 0;
+}
+.wm-detail-lable{
+  width: 750rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.wm-detail-lable-list{
+  width: 100%;
+  padding: 20rpx 0 ;
+  box-sizing: border-box;
+}
+.wm-detail-lable-list text{
+  border: 1px solid #c6c6c6;
+  color: #aaa;
+  padding: 6rpx 8rpx;
+  border-radius: 6rpx;
+  margin-right: 12rpx;
+}
+
