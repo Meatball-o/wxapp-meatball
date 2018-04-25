@@ -5,20 +5,25 @@
       请输入关键字搜索
     </navigator>
   </view>
-  <view class="mb-list-toggle cf ui-border-b"style="margin-top: 0">
-    <view class="time lf" >
-      <text class="active">时间</text>
+  <view class="goods-title ui-border-b">
+    <text class="toggle-list py-price {{score==null?'':(score?'up':'down')}}" data-type="score" bindtap="toggleListActive">评分
       <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
-      <text class="iconfont icon-zhcc_xiangxiajiantou" style="top: 10rpx;"></text>
-    </view>
-    <view class="score lf">评分</view>
+      <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
+    </text>
+    <text class="toggle-list py-xl {{date==null?'':(date?'up':'down')}}" data-type="date"  bindtap="toggleListActive">最新
+      <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
+      <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
+    </text>
   </view>
   <view class="index-list">
-    <view class="index-list-con cf"wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}" hover-class="none"  bindtap="jumpDetail" wx:key="index">
+    <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
+          hover-class="none" bindtap="jumpDetail" wx:key="index">
       <text class="iconfont icon-new2 lf"></text>
       <text class="index-list-title hidden lf">{{index+1}}. {{item.title}}</text>
-      <text class="index-list-score rt">1.0</text>
+      <text class="index-list-score rt">{{item.score}}</text>
     </view>
   </view>
   <view class="footer-border ui-border-b"></view>
+  <view class="index-loading" wx:if="{{loading}}">正在加载...</view>
+  <view class="index-loading" wx:if="{{!loading&&loaded===true}}">没有更多数据了...</view>
 </view>

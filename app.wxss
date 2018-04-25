@@ -60,11 +60,17 @@
 
 
 
-
+.index-loading{
+  margin:0;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+}
 page{
   font-size:28rpx;
   background-color: #f6f6f6;
   font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  height: 100%;
 }
 
 .lf {
@@ -104,7 +110,64 @@ page{
 .vm-detail-t text{
   padding-left: 20rpx;
   font-weight: bold;
+  font-size: 30rpx;
 }
+.goods-title{
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 750rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+.goods-title .toggle-list{
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+.goods-title .toggle-list .iconfont{
+  font-size: 24rpx;
+  position: absolute;
+  top:-8rpx;
+  right: 127rpx;
+}
+.goods-title .toggle-list .iconfont{
+  color: #333;
+}
+.goods-title .toggle-list.up, .goods-title .toggle-list.up .icon-zhcc_xiangshangjiantou:before{
+  color:red;
+}
+.goods-title .toggle-list.down, .goods-title .toggle-list.down .icon-zhcc_xiangxiajiantou:before{
+  color:red;
+}
+.index-f-phone{
+  background-color: #fff;
+  width: 80rpx;
+  height: 80rpx;
+  color: #000;
+  border-radius: 40rpx;
+  position: fixed;
+  bottom: 80rpx;
+  right: 30rpx;
+  border: 1rpx solid #eee;
+  line-height: 44rpx;
+}
+.index-f-phone .iconfont{
+  font-size: 56rpx;
+  position: absolute;
+  top:17rpx;
+  left: 10rpx;
+  color: rgba(99, 91, 102, 0.91);
+}
+
+
+
 
 .ui-border-b:before {
   border-bottom: 1px solid #e9e9e9;

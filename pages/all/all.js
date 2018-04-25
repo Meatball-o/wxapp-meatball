@@ -1,62 +1,104 @@
 //detail.js
 //获取应用实例
-var utils = require('../../utils/util.js');
-
+var utils = require('../../utils/util.js')
 const app = getApp()
 Page({
   data: {
-    content: [],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 500,
-    imgUrls:[
-      "https://alicdn.leyoujia.com/wap/images/index/hfzj-banner@2x.png"
-    ],
+    score: false,
+    date: null,
   },
-  onLoad: function () {
-    var that = this
-    wx.showLoading({
-      title: '加载中',
+  toggleListActive(event){
+    const vm = this
+    const {type} = event.currentTarget.dataset
+    if (type == "date") {
+      vm.setData({
+        score: null,
+        date: !vm.data.date
+      })
+    } else if (type == "score") {
+      vm.setData({
+        date: null,
+        score: !vm.data.score
+      })
+    }
+    // 当前分页
+    vm._index_curPage = 1
+    // 分页全部加载完 分页重置
+    vm._index_loaded=false
+    vm.setData({
+      content:[]
     })
+    vm.requestData()
+  },
+  requestData(){
+    var vm = this
+    // loading 还在请求 加载中
+    if (vm.data.loading || vm._index_loaded) {
+      return
+    }
+    vm.setData({
+      loading: true
+    })
+    vm._index_curPage = vm._index_curPage || 1
+    const {date, score} = vm.data
     wx.request({
+      method: "GET",
       url: 'https://heiliuer.com/crawler/api/6v/video',
-      data: {},
-      header: {
-        'content-type': 'application/json'
+      dataType: 'json',
+      header: {},
+      data: {
+        sort: {
+          createTime: date,
+          score: score
+        },
+        page: vm._index_curPage,
+        limit: 10
       },
       success(res) {
-        console.log({
-          data: res.data,
-          isStr: typeof res.data
-        });
-        if (typeof res.data == 'string') {
-          res.data = JSON.parse(res.data)
-        }
-        console.log(res.data.data)
-        const content = res.data.data.docs;
-
-        content.forEach(
-          function (d) {
-            d.docs = (d.docs || '').trim()
+        if (res.statusCode == 200) {
+          const {docs, page, pages} = res.data.data
+          const content = (vm.data.content || []).concat(docs)
+          if (page >= pages) {
+            vm._index_loaded = true
+            // loaded 数据加载完
+            vm.setData({
+              loaded: true
+            })
           }
-          // d => d.listDesc = (d.desc || '').trim()
-        )
-        that.setData({content})
+          vm.setData({content})
+          vm._index_curPage++
+        } else {
+          wx.showModal({
+            title: '提示',
+            content: '请求出错',
+            showCancel: false,
+            success: function (res) {
+              if (res.confirm) {
+              }
+            }
+          })
+        }
       },
-      fail(){
-        wx.showToast({
-          title: '获取数据失败 ',
-          icon: 'error',
-          duration: 2000
+      fail() {
+        wx.showModal({
+          title: '提示',
+          content: '请求出错',
+          showCancel: false,
+          success: function (res) {
+            if (res.confirm) {
+            }
+          }
         })
-        console.log(arguments)
       },
-      complete(){
-        wx.hideLoading()
-      }
+      complete() {
+        vm.setData({
+          loading: false
+        })
+      },
     })
-
+  },
+  onLoad: function () {
+    this.requestData()
   },
   jumpDetail: function (event) {
     wx.setStorage({
@@ -66,18 +108,22 @@ Page({
     wx.navigateTo({
       url: event.currentTarget.dataset.url
     })
-    console.log(event);
+    console.log(event)
   },
-  previewImage: function (e) {
-    var current=e.target.dataset.url;
-    var content=this.data.content;
-    var urls=content.map(function (item) {
-      return item.thumb
-    })
-    wx.previewImage({
-      current: current, // 当前显示图片的http链接
-      urls:urls // 需要预览的图片http链接列表
-    })
-  }
+  onShareAppMessage(res) {
+    const vm = this
+    return {
+      title: '影集',
+      path: '/pages/index/index',
+      form: 'menu',
+      success: function (res) {
+        // 转发成功
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
+  },
 })
+
 

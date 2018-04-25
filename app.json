@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/search/search",
     "pages/all/all",
+    "pages/index/index",
     "pages/my/my",
+    "pages/search/search",
     "pages/detail/detail",
     "pages/logs/logs"
   ],
@@ -12,7 +12,9 @@
     "navigationBarBackgroundColor": "#1AAD19",
     "navigationBarTit.leText": "WeChat",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "red"
+    "backgroundColor": "red",
+    "backgroundColorBottom":"#f6f6f6",
+    "onReachBottomDistance":"60"
   },
   "tabBar": {
     "borderStyle": "white",
