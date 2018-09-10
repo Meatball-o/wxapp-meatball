@@ -55,21 +55,26 @@
   }
 }
 
-.index-list .index-list-con {
-  width: rpx(690);
+.index-list {
+  width: rpx(750);
   box-sizing: border-box;
-  height: rpx(72);
-  line-height: rpx(72);
-  background-color: #fff;
-  margin: rpx(20) 0 0 0;
-  padding: 0 rpx(16);
-  border-radius: rpx(8);
-  &:last-of-type {
-    margin-bottom: rpx(20);
-  }
-  .iconfont {
-    color: red;
-    padding-right: rpx(12);
+  padding: 0 rpx(30);
+  .index-list-con {
+    width: rpx(690);
+    box-sizing: border-box;
+    height: rpx(72);
+    line-height: rpx(72);
+    background-color: #fff;
+    margin: rpx(20) 0 0 0;
+    padding: 0 rpx(16);
+    border-radius: rpx(8);
+    &:last-of-type {
+      margin-bottom: rpx(20);
+    }
+    .iconfont {
+      color: red;
+      padding-right: rpx(12);
+    }
   }
 }
 

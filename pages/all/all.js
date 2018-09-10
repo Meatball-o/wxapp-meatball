@@ -1,6 +1,7 @@
 //detail.js
 //获取应用实例
 var utils = require('../../utils/util.js')
+
 const app = getApp()
 Page({
   data: {
@@ -52,7 +53,7 @@ Page({
           score: score
         },
         page: vm._index_curPage,
-        limit: 10
+        limit: 100
       },
       success(res) {
         if (res.statusCode == 200) {
@@ -125,5 +126,4 @@ Page({
     }
   },
 })
-
 

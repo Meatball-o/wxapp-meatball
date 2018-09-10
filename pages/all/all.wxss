@@ -42,20 +42,24 @@
     right: 504rpx;
     font-size: 22rpx; }
 
-.index-list .index-list-con {
-  width: 690rpx;
+.index-list {
+  width: 750rpx;
   box-sizing: border-box;
-  height: 72rpx;
-  line-height: 72rpx;
-  background-color: #fff;
-  margin: 20rpx 0 0 0;
-  padding: 0 16rpx;
-  border-radius: 8rpx; }
-  .index-list .index-list-con:last-of-type {
-    margin-bottom: 20rpx; }
-  .index-list .index-list-con .iconfont {
-    color: red;
-    padding-right: 12rpx; }
+  padding: 0 30rpx; }
+  .index-list .index-list-con {
+    width: 690rpx;
+    box-sizing: border-box;
+    height: 72rpx;
+    line-height: 72rpx;
+    background-color: #fff;
+    margin: 20rpx 0 0 0;
+    padding: 0 16rpx;
+    border-radius: 8rpx; }
+    .index-list .index-list-con:last-of-type {
+      margin-bottom: 20rpx; }
+    .index-list .index-list-con .iconfont {
+      color: red;
+      padding-right: 12rpx; }
 
 .index-list-score {
   font-size: 30rpx;

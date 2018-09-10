@@ -1,3 +1,15 @@
+.list-hot {
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  display: block;
+  text-align: center;
+  margin: 0 auto; }
+  .list-hot text {
+    text-align: center;
+    font-size: 32rpx;
+    padding-bottom: 20rpx; }
+
 .index-head {
   width: 750rpx;
   height: 84rpx;

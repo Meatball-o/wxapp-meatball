@@ -1,24 +1,16 @@
 <view class="goods-detail">
   <view class="wm-detail">
-    <view class="detail-bg"></view>
+    <view class="detail-bg" style="background-image: url({{content.thumb}})"></view>
     <view class="wm-detail-header cf">
-      <view class="detail-bc" style="background-image: url({{content.thumb}})"></view>
       <view class="wm-detail-lf lf">
         <image src="{{content.thumb}}"></image>
       </view>
       <view class="wm-detail-rt lf">
         <text class="wm-detail-title">{{content.name}}</text>
-        <text class="wm-detail-score">用户评分：{{content.score}}</text>
+        <text class="wm-detail-score">用户评分：{{content.score}}分</text>
         <text class="wm-detail-createtime">更新时间：{{createTime}}</text>
-      </view>
-    </view>
-  </view>
-  <view class="wm-detail-character">
-    <view class="sell-door-con">
-      <view class="sell-door-con-ov">
-        <view class="sell-door-list" wx:for="{{content.images}}" wx:key="{{index}}">
-          <image bindtap="previewImage" data-url="{{content.thumb}}" src="{{item}}"></image>
-        </view>
+        <text class="wm-detail-score">类别：剧情/喜剧/动作</text>
+        <text class="wm-detail-yy">演员：孔连顺 王智 吴孟达 梁超 郝劭文 张子栋 李欣蕊 张峻豪 今井隆星</text>
       </view>
     </view>
   </view>
@@ -49,8 +41,5 @@
         <button class="rt" data-url="{{item.url}}" bindtap="setClipboardData">复制</button>
       </view>
     </view>
-  </view>
-  <view class="news-gd-footer"  bindtap="collect">
-    <text class="iconfont icon-hot3"></text>
   </view>
 </view>

@@ -1,5 +1,17 @@
 @import "../../_value.scss";
-
+.list-hot{
+  width: rpx(140);
+  height: rpx(140);
+  line-height: rpx(140);
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  text{
+    text-align: center;
+    font-size: rpx(32);
+    padding-bottom: rpx(20);
+  }
+}
 .index-head {
   width: rpx(750);
   height: rpx(84);

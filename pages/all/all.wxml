@@ -1,4 +1,4 @@
-<view class="mb-list">
+<view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;" class="mb-list">
   <view class="index-head">
     <navigator class="index-head-txt" url="/pages/search/search" hover-class="none">
       <text class="iconfont icon-sousuo"></text>
@@ -6,11 +6,12 @@
     </navigator>
   </view>
   <view class="goods-title ui-border-b">
-    <text class="toggle-list py-price {{score==null?'':(score?'up':'down')}}" data-type="score" bindtap="toggleListActive">评分
+    <text class="toggle-list py-price {{score==null?'':(score?'up':'down')}}" data-type="score"
+          bindtap="toggleListActive">评分
       <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
       <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
     </text>
-    <text class="toggle-list py-xl {{date==null?'':(date?'up':'down')}}" data-type="date"  bindtap="toggleListActive">最新
+    <text class="toggle-list py-xl {{date==null?'':(date?'up':'down')}}" data-type="date" bindtap="toggleListActive">最新
       <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
       <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
     </text>

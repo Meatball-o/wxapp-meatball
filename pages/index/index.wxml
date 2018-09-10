@@ -1,4 +1,4 @@
-<scroll-view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;" class="mb-list">
+<view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;" class="mb-list">
   <view class="index-head">
     <navigator class="index-head-txt" url="/pages/search/search" hover-class="none">
       <text class="iconfont icon-sousuo"></text>
@@ -13,15 +13,8 @@
       </swiper-item>
     </block>
   </swiper>
-  <view class="goods-title ui-border-b">
-    <text class="toggle-list py-price {{score==null?'':(score?'up':'down')}}" data-type="score" bindtap="toggleListActive">评分
-      <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
-      <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
-    </text>
-    <text class="toggle-list py-xl {{date==null?'':(date?'up':'down')}}" data-type="date"  bindtap="toggleListActive">最新
-      <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
-      <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
-    </text>
+  <view class="list-hot">
+    <text class="ui-border-b">热门 HOT</text>
   </view>
   <view class="index-list">
     <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
@@ -34,4 +27,4 @@
   <view class="footer-border ui-border-b"></view>
   <view class="index-loading" wx:if="{{loading}}">正在加载...</view>
   <view class="index-loading" wx:if="{{!loading&&loaded===true}}">没有更多数据了...</view>
-</scroll-view>
+</view>
