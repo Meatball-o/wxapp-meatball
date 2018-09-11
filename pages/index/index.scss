@@ -6,10 +6,14 @@
   display: block;
   text-align: center;
   margin: 0 auto;
-  text{
+  view{
     text-align: center;
     font-size: rpx(32);
     padding-bottom: rpx(20);
+    font-weight: bold;
+    >text{
+      color: #418100;
+    }
   }
 }
 .index-head {
@@ -31,6 +35,10 @@
       font-size: rpx(36);
     }
   }
+}
+swiper {
+  display:block;
+  height:rpx(300);
 }
 
 .mb-list-swiper {
@@ -72,11 +80,11 @@
   box-sizing: border-box;
   padding: 0 rpx(30);
   .index-list-con {
+    background-color: #fff;
     width: rpx(690);
     box-sizing: border-box;
     height: rpx(72);
     line-height: rpx(72);
-    background-color: #fff;
     margin: rpx(20) 0 0 0;
     padding: 0 rpx(16);
     border-radius: rpx(8);

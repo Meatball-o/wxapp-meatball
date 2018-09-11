@@ -2,87 +2,80 @@
 
 .goods-detail {
   width: rpx(750);
-  background-color: #fff;
   position: relative;
-  .detail-bg {
-    overflow: hidden;
-    width: rpx(800);
-    height: rpx(500);
-    position: absolute;
-    background-color: #000;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    margin-top: rpx(-6);
-    background-attachment:fixed;
-    background-position:  center center;
-    background-size: cover;
-    -webkit-filter: blur(10px); /* Chrome, Opera */
-    -moz-filter: blur(10px);
-    -ms-filter: blur(10px);
-    filter: blur(10px);
-    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false); /* IE6~IE9 */
+  .box-flex {
+    display: -webkit-box;
+    display: flex;
   }
-  .wm-detail-header {
+  .line-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .movie-detail {
     width: rpx(750);
-    height: rpx(456);
-    box-sizing: border-box;
-    color: #fff;
     position: relative;
-    background-position: center;
-    background-size: cover;
-    .wm-detail-lf {
-      width: 45%;
-      box-sizing: border-box;
-      padding: rpx(40) 0 rpx(40) rpx(40);
+    height: rpx(600);
+    cursor: pointer;
+    .movie-filter {
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 20;
-      image {
-        background-color: #000;
-        width: rpx(280);
-        height: rpx(390);
-        border-radius: rpx(8);
-      }
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
     }
-    .wm-detail-rt {
-      width: 55%;
-      box-sizing: border-box;
-      padding: rpx(40) rpx(40) rpx(40) rpx(20);
+    .poster-bg {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
       position: absolute;
-      color: #fff;
-      top: 0;
-      right: 0;
-      z-index: 20;
-      > text {
-        display: block;
-        font-size: rpx(30);
+      -webkit-filter: blur(0.3rem);
+      filter: blur(0.3rem);
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: .55;
+    }
+    .detail {
+      height: rpx(600);
+      padding: rpx(40) rpx(50);
+      box-sizing: border-box;
+      .poster {
+        image {
+          width: rpx(330);
+          height: rpx(460);
+          box-sizing: border-box;
+        }
       }
-      .wm-detail-title {
-        font-size: rpx(36);
-        padding-bottom: rpx(8);
-        width: 82%;
-      }
-      .wm-detail-score {
-        padding: rpx(18) 0;
-      }
-      .wm-detail-yy{
-        display: -webkit-box;
-        line-height: rpx(48);
-        word-break: break-all;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp:2;
-        overflow: hidden;
-        text-overflow:ellipsis;
+      .content {
+        > text {
+          display: block;
+        }
+        overflow-x: hidden;
+        margin-left: 12.5px;
+        line-height: 1;
+        color: #fff;
+        .title {
+          font-size: rpx(36);
+          margin-top: rpx(4);
+          overflow: hidden;
+        }
+        .score {
+          font-size: rpx(30);
+          color: #418100;
+          margin-top: rpx(22);
+        }
+        .time, .type, .performer {
+          font-size: rpx(30);
+          margin-top: rpx(22);
+        }
       }
     }
   }
   .wm-detail-lable {
     width: rpx(750);
-    padding: 0 rpx(30);
+    padding: rpx(40);
     box-sizing: border-box;
-    margin-top: rpx(100);
     background-color: #fff;
     .wm-detail-lable-list {
       width: 100%;
@@ -90,12 +83,11 @@
       box-sizing: border-box;
       text {
         color: #1a1a1a;
-        display: inline-block;
-        line-height: rpx(80);
+        display: block;
+        line-height: rpx(70);
         font-size: rpx(30);
       }
     }
-
   }
   .wm-detail-synopsis {
     width: rpx(750);
@@ -150,8 +142,6 @@
 .wm-detail-url-con {
   padding: rpx(20) 0;
 }
-
-
 
 .sell-door-list {
   float: left;

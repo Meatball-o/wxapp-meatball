@@ -1,43 +1,51 @@
 .my {
   width: 100%;
   box-sizing: border-box;
-  padding: 0 rpx(30); }
+  padding: 0 rpx(30);
+}
 
 .my navigator {
   height: rpx(88);
   line-height: rpx(88);
   position: relative;
   padding-left: rpx(60);
-  font-size: rpx(32); }
+  font-size: rpx(32);
+}
 
 .my navigator .iconfont:first-child {
   position: absolute;
   top: rpx(-2);
   left: rpx(0);
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .favorite .iconfont:first-child {
   font-size: rpx(42);
-  color: #E98071; }
+  color: #E98071;
+}
 
 .history .iconfont:first-child {
   font-size: rpx(40);
-  color: #B2D55D; }
+  color: #B2D55D;
+}
 
 .business .iconfont:first-child {
   font-size: rpx(35);
-  color: #F095A3; }
+  color: #F095A3;
+}
 
 .feedback .iconfont:first-child {
   font-size: rpx(35);
-  color: #8CC9BC; }
+  color: #8CC9BC;
+}
 
 .personal-info {
   width: rpx(750);
   height: rpx(360);
   margin: 0 auto;
   text-align: center;
-  position: relative; }
+  position: relative;
+}
 
 .personal-info .s-image {
   width: rpx(120);
@@ -47,7 +55,8 @@
   position: absolute;
   z-index: 99;
   top: rpx(100);
-  left: rpx(90); }
+  left: rpx(90);
+}
 
 .personal-info .py-name {
   width: rpx(660);
@@ -62,7 +71,8 @@
   padding-left: rpx(80);
   font-size: rpx(31);
   color: #fff;
-  /*background-color: rgba(255, 255, 255, 0.32);*/ }
+  /*background-color: rgba(255, 255, 255, 0.32);*/
+}
 
 .personal-info .b-image {
   width: rpx(750);
@@ -74,6 +84,5 @@
   filter: blur(0.3rem);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .55; }
-
-/*# sourceMappingURL=my.wxss.map */
+  opacity: .55;
+}

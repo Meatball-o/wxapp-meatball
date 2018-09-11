@@ -68,7 +68,7 @@
 }
 page{
   font-size:28rpx;
-  background-color: #f6f6f6;
+  background-color: #fff;
   font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
   height: 100%;
 }

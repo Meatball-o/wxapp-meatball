@@ -5,10 +5,13 @@
   display: block;
   text-align: center;
   margin: 0 auto; }
-  .list-hot text {
+  .list-hot view {
     text-align: center;
     font-size: 32rpx;
-    padding-bottom: 20rpx; }
+    padding-bottom: 20rpx;
+    font-weight: bold; }
+    .list-hot view > text {
+      color: #418100; }
 
 .index-head {
   width: 750rpx;
@@ -27,6 +30,10 @@
       left: 216rpx;
       top: 12rpx;
       font-size: 36rpx; }
+
+swiper {
+  display: block;
+  height: 300rpx; }
 
 .mb-list-swiper {
   width: 750rpx; }
@@ -58,11 +65,11 @@
   box-sizing: border-box;
   padding: 0 30rpx; }
   .index-list .index-list-con {
+    background-color: #fff;
     width: 690rpx;
     box-sizing: border-box;
     height: 72rpx;
     line-height: 72rpx;
-    background-color: #fff;
     margin: 20rpx 0 0 0;
     padding: 0 16rpx;
     border-radius: 8rpx; }

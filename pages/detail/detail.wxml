@@ -1,16 +1,17 @@
 <view class="goods-detail">
-  <view class="wm-detail">
-    <view class="detail-bg" style="background-image: url({{content.thumb}})"></view>
-    <view class="wm-detail-header cf">
-      <view class="wm-detail-lf lf">
+  <view class="movie-detail">
+    <view class="movie-filter"></view>
+    <view class="poster-bg" style="background-image: url({{content.thumb}})"></view>
+    <view class="detail box-flex">
+      <view class="poster">
         <image src="{{content.thumb}}"></image>
       </view>
-      <view class="wm-detail-rt lf">
-        <text class="wm-detail-title">{{content.name}}</text>
-        <text class="wm-detail-score">用户评分：{{content.score}}分</text>
-        <text class="wm-detail-createtime">更新时间：{{createTime}}</text>
-        <text class="wm-detail-score">类别：剧情/喜剧/动作</text>
-        <text class="wm-detail-yy">演员：孔连顺 王智 吴孟达 梁超 郝劭文 张子栋 李欣蕊 张峻豪 今井隆星</text>
+      <view class="content flex">
+        <text class="title middle line-ellipsis">{{content.name}}</text>
+        <text class="score line-ellipsis">{{content.score}}分</text>
+        <text class="time line-ellipsis">{{createTime}}</text>
+        <text class="type line-ellipsis">剧情/喜剧/动作</text>
+        <text class="performer line-ellipsis">孔连顺 王智 吴孟达 梁超 郝劭文 张子栋 李欣蕊 张峻豪 今井隆星</text>
       </view>
     </view>
   </view>
@@ -22,14 +23,14 @@
       <text wx:for="{{contentMore}}" wx:key="{{index}}">{{item}}</text>
     </view>
   </view>
-  <view class="wm-detail-synopsis">
-    <view class="vm-detail-t">
-      <text>剧情简介</text>
-    </view>
-    <view class="wm-detail-synopsis-desc">
-      {{content.desc}}
-    </view>
-  </view>
+  <!--<view class="wm-detail-synopsis">-->
+    <!--<view class="vm-detail-t">-->
+      <!--<text>剧情简介</text>-->
+    <!--</view>-->
+    <!--<view class="wm-detail-synopsis-desc">-->
+      <!--{{content.desc}}-->
+    <!--</view>-->
+  <!--</view>-->
   <view class="wm-detail-url">
     <view class="vm-detail-t">
       <text>链接</text>

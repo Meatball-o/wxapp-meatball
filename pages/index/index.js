@@ -12,7 +12,8 @@ Page({
     interval: 5000,
     duration: 500,
     imgUrls: [
-      "https://alicdn.leyoujia.com/wap/images/index/hfzj-banner@2x.png"
+      "https://gw.alicdn.com/tfs/TB1kQOdwP7nBKNjSZLeXXbxCFXa-1280-520.jpg_720x720Q30s100.jpg",
+      "https://gw.alicdn.com/tfs/TB1fBrowyMnBKNjSZFzXXc_qVXa-1280-520.jpg_720x720Q30s100.jpg"
     ],
   },
   toggleListActive(event){

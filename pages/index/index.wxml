@@ -1,4 +1,4 @@
-<view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;" class="mb-list">
+<view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;background-color: #f6f6f6;" class="mb-list" >
   <view class="index-head">
     <navigator class="index-head-txt" url="/pages/search/search" hover-class="none">
       <text class="iconfont icon-sousuo"></text>
@@ -7,14 +7,14 @@
   </view>
   <swiper class="mb-list-swiper" indicator-dots="{{indicatorDots}}"
           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block>
+    <block  wx:for="{{imgUrls}}">
       <swiper-item>
         <image src="{{imgUrls}}" class="slide-image" width="355" height="150"/>
       </swiper-item>
     </block>
   </swiper>
   <view class="list-hot">
-    <text class="ui-border-b">热门 HOT</text>
+    <view>热门 <text> HOT</text></view>
   </view>
   <view class="index-list">
     <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
