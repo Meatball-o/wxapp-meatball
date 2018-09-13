@@ -1,27 +1,63 @@
 .index-head {
   width: 750rpx;
-  height: 84rpx;
-  padding: 12rpx;
-  box-sizing: border-box; }
+  height: 82rpx;
+  background-color: #eee;
+  position: relative; }
   .index-head .index-head-txt {
-    width: 100%;
+    position: absolute;
+    top: 11rpx;
+    left: 10rpx;
+    width: 730rpx;
     background-color: #fff;
     height: 60rpx;
-    line-height: 64rpx;
-    border-radius: 5rpx;
+    line-height: 60rpx;
+    border-radius: 6rpx;
     text-align: center;
     color: #888; }
     .index-head .index-head-txt .iconfont {
       position: absolute;
-      left: 216rpx;
-      top: 12rpx;
-      font-size: 36rpx; }
+      left: 200rpx;
+      top: 2rpx;
+      font-size: 36rpx;
+      font-weight: bold; }
 
 .mb-list-swiper {
   width: 750rpx; }
   .mb-list-swiper image {
     width: 750rpx;
     height: 300rpx; }
+
+.goods-title {
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 750rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999; }
+  .goods-title .toggle-list {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-size: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    position: relative; }
+    .goods-title .toggle-list .iconfont {
+      font-size: 24rpx;
+      position: absolute;
+      top: -8rpx;
+      right: 127rpx; }
+
+.goods-title .toggle-list .iconfont {
+  color: #333; }
+
+.goods-title .toggle-list.up, .goods-title .toggle-list.up .icon-zhcc_xiangshangjiantou:before {
+  color: #418100; }
+
+.goods-title .toggle-list.down, .goods-title .toggle-list.down .icon-zhcc_xiangxiajiantou:before {
+  color: #418100; }
 
 .mb-list-toggle {
   width: 750rpx;
@@ -34,7 +70,7 @@
     font-size: 30rpx;
     text-align: center; }
   .mb-list-toggle .time .active {
-    color: red;
+    color: #418100;
     position: relative; }
   .mb-list-toggle .time .iconfont {
     position: absolute;
@@ -47,24 +83,25 @@
   box-sizing: border-box;
   padding: 0 30rpx; }
   .index-list .index-list-con {
+    height: 80rpx;
+    line-height: 82rpx;
+    background-color: #fff;
+    box-shadow: 0 12rpx 50rpx #ccc;
     width: 690rpx;
     box-sizing: border-box;
-    height: 72rpx;
-    line-height: 72rpx;
-    background-color: #fff;
     margin: 20rpx 0 0 0;
     padding: 0 16rpx;
     border-radius: 8rpx; }
     .index-list .index-list-con:last-of-type {
       margin-bottom: 20rpx; }
     .index-list .index-list-con .iconfont {
-      color: red;
+      color: #418100;
       padding-right: 12rpx; }
 
 .index-list-score {
   font-size: 30rpx;
   font-weight: bold;
-  color: red; }
+  color: #418100; }
 
 .index-list-title {
   width: 500rpx; }

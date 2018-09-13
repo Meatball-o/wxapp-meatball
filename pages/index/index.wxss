@@ -1,42 +1,46 @@
 .list-hot {
-  width: 140rpx;
-  height: 140rpx;
-  line-height: 140rpx;
+  height: 100rpx;
+  line-height: 120rpx;
   display: block;
   text-align: center;
   margin: 0 auto; }
   .list-hot view {
     text-align: center;
     font-size: 32rpx;
-    padding-bottom: 20rpx;
     font-weight: bold; }
     .list-hot view > text {
-      color: #418100; }
+      color: red; }
 
 .index-head {
   width: 750rpx;
-  height: 84rpx;
-  padding: 12rpx; }
+  height: 82rpx;
+  background-color: #eee;
+  position: relative; }
   .index-head .index-head-txt {
-    width: 100%;
+    position: absolute;
+    top: 11rpx;
+    left: 10rpx;
+    width: 730rpx;
     background-color: #fff;
     height: 60rpx;
-    line-height: 64rpx;
-    border-radius: 5rpx;
+    line-height: 60rpx;
+    border-radius: 6rpx;
     text-align: center;
     color: #888; }
     .index-head .index-head-txt .iconfont {
       position: absolute;
-      left: 216rpx;
-      top: 12rpx;
-      font-size: 36rpx; }
+      left: 200rpx;
+      top: 2rpx;
+      font-size: 36rpx;
+      font-weight: bold; }
 
 swiper {
   display: block;
   height: 300rpx; }
 
 .mb-list-swiper {
-  width: 750rpx; }
+  width: 750rpx;
+  box-shadow: 0 20rpx 200rpx #ddd; }
   .mb-list-swiper image {
     width: 750rpx;
     height: 300rpx; }
@@ -52,7 +56,7 @@ swiper {
     font-size: 30rpx;
     text-align: center; }
   .mb-list-toggle .time .active {
-    color: red;
+    color: #418100;
     position: relative; }
   .mb-list-toggle .time .iconfont {
     position: absolute;
@@ -65,11 +69,12 @@ swiper {
   box-sizing: border-box;
   padding: 0 30rpx; }
   .index-list .index-list-con {
+    height: 80rpx;
+    line-height: 82rpx;
     background-color: #fff;
+    box-shadow: 0 12rpx 50rpx #ccc;
     width: 690rpx;
     box-sizing: border-box;
-    height: 72rpx;
-    line-height: 72rpx;
     margin: 20rpx 0 0 0;
     padding: 0 16rpx;
     border-radius: 8rpx; }
@@ -82,7 +87,7 @@ swiper {
 .index-list-score {
   font-size: 30rpx;
   font-weight: bold;
-  color: red; }
+  color: #418100; }
 
 .index-list-title {
   width: 550rpx; }

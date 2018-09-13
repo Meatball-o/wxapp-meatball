@@ -1,79 +1,76 @@
-.my {
+.my{
   width: 100%;
   box-sizing: border-box;
-  padding: 0 rpx(30); }
-
-.my navigator {
-  height: rpx(88);
-  line-height: rpx(88);
+  padding: 0 30rpx;
+}
+.my navigator{
+  height: 88rpx;
+  line-height: 88rpx;
   position: relative;
-  padding-left: rpx(60);
-  font-size: rpx(32); }
-
-.my navigator .iconfont:first-child {
+  padding-left: 60rpx;
+  font-size: 32rpx;
+}
+.my navigator .iconfont:first-child{
   position: absolute;
-  top: rpx(-2);
-  left: rpx(0);
-  font-weight: bold; }
+  top:-2rpx;
+  left: 0rpx;
+  font-weight: bold;
+}
+.favorite .iconfont:first-child{
+  font-size: 42rpx;
+  color: #E98071;
+}
+.history .iconfont:first-child{
+  font-size: 40rpx;
+  color: #B2D55D;
+}
+.business .iconfont:first-child{
+  font-size: 35rpx;
+  color: #F095A3;
+}
+.feedback .iconfont:first-child{
+  font-size: 35rpx;
+  color: #8CC9BC;
+}
 
-.favorite .iconfont:first-child {
-  font-size: rpx(42);
-  color: #E98071; }
-
-.history .iconfont:first-child {
-  font-size: rpx(40);
-  color: #B2D55D; }
-
-.business .iconfont:first-child {
-  font-size: rpx(35);
-  color: #F095A3; }
-
-.feedback .iconfont:first-child {
-  font-size: rpx(35);
-  color: #8CC9BC; }
-
-.personal-info {
-  width: rpx(750);
-  height: rpx(360);
+.personal-info{
+  width: 750rpx;
+  height: 360rpx;
   margin: 0 auto;
   text-align: center;
-  position: relative; }
-
-.personal-info .s-image {
-  width: rpx(120);
-  height: rpx(120);
-  border-radius: rpx(60);
+  position: relative;
+}
+.personal-info .s-image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
   margin: 0 auto;
   position: absolute;
   z-index: 99;
-  top: rpx(100);
-  left: rpx(90); }
-
-.personal-info .py-name {
-  width: rpx(660);
+  top: 100rpx;
+  left: 90rpx;
+}
+.personal-info .py-name{
+  width: 660rpx;
   box-sizing: border-box;
   position: absolute;
   text-align: left;
   z-index: 90;
-  top: rpx(100);
-  left: rpx(168);
-  height: rpx(120);
-  line-height: rpx(120);
-  padding-left: rpx(80);
-  font-size: rpx(31);
-  color: #fff;
-  /*background-color: rgba(255, 255, 255, 0.32);*/ }
-
-.personal-info .b-image {
-  width: rpx(750);
-  height: rpx(360);
-  z-index: -1;
-  overflow: hidden;
-  position: absolute;
-  -webkit-filter: blur(0.3rem);
-  filter: blur(0.3rem);
+  top: 100rpx;
+  left: 168rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  padding-left: 80rpx;
+  font-size: 31rpx;
+  color:#fff;
+  /*background-color: rgba(255, 255, 255, 0.32);*/
+}
+.personal-info .b-image{
+  width: 750rpx;
+  height: 360rpx;
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
-  opacity: .55; }
-
-/*# sourceMappingURL=my.wxss.map */
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=10, MakeShadow=false);
+}

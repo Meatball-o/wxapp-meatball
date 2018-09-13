@@ -1,48 +1,55 @@
 @import "../../_value.scss";
-.list-hot{
-  width: rpx(140);
-  height: rpx(140);
-  line-height: rpx(140);
+
+.list-hot {
+  height: rpx(100);
+  line-height: rpx(120);
   display: block;
   text-align: center;
   margin: 0 auto;
-  view{
+  view {
     text-align: center;
     font-size: rpx(32);
-    padding-bottom: rpx(20);
     font-weight: bold;
-    >text{
-      color: #418100;
+    > text {
+      color: red;
     }
   }
 }
+
 .index-head {
   width: rpx(750);
-  height: rpx(84);
-  padding: rpx(12);
+  height: rpx(82);
+  background-color: #eee;
+  position: relative;
   .index-head-txt {
-    width: 100%;
+    position: absolute;
+    top:rpx(11);
+    left: rpx(10);
+    width: rpx(730);
     background-color: #fff;
     height: rpx(60);
-    line-height: rpx(64);
-    border-radius: rpx(5);
+    line-height: rpx(60);
+    border-radius: rpx(6);
     text-align: center;
     color: #888;
     .iconfont {
       position: absolute;
-      left: rpx(216);
-      top: rpx(12);
+      left: rpx(200);
+      top: rpx(2);
       font-size: rpx(36);
+      font-weight: bold;
     }
   }
 }
+
 swiper {
-  display:block;
-  height:rpx(300);
+  display: block;
+  height: rpx(300);
 }
 
 .mb-list-swiper {
   width: rpx(750);
+  box-shadow: 0 rpx(20) rpx(200) #ddd;
   image {
     width: rpx(750);
     height: rpx(300);
@@ -63,7 +70,7 @@ swiper {
   }
   .time {
     .active {
-      color: red;
+      color: #418100;
       position: relative;
     }
     .iconfont {
@@ -80,11 +87,12 @@ swiper {
   box-sizing: border-box;
   padding: 0 rpx(30);
   .index-list-con {
+    height: rpx(80);
+    line-height: rpx(82);
     background-color: #fff;
+    box-shadow: 0 rpx(12) rpx(50) #ccc;
     width: rpx(690);
     box-sizing: border-box;
-    height: rpx(72);
-    line-height: rpx(72);
     margin: rpx(20) 0 0 0;
     padding: 0 rpx(16);
     border-radius: rpx(8);
@@ -101,7 +109,7 @@ swiper {
 .index-list-score {
   font-size: rpx(30);
   font-weight: bold;
-  color: red;
+  color: #418100;
 }
 
 .index-list-title {

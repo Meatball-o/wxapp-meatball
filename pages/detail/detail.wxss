@@ -18,29 +18,32 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-color: #333; }
+      background-color: #666666; }
     .goods-detail .movie-detail .poster-bg {
       width: 100%;
       height: 100%;
       z-index: -1;
       overflow: hidden;
       position: absolute;
-      -webkit-filter: blur(0.3rem);
-      filter: blur(0.3rem);
+      -webkit-filter: blur(0.5rem);
+      filter: blur(0.5rem);
       background-size: cover;
       background-repeat: no-repeat;
       opacity: .55; }
     .goods-detail .movie-detail .detail {
       height: 600rpx;
-      padding: 40rpx 50rpx;
+      padding: 80rpx 52rpx 50rpx 46rpx;
       box-sizing: border-box; }
       .goods-detail .movie-detail .detail .poster image {
-        width: 330rpx;
-        height: 460rpx;
-        box-sizing: border-box; }
+        box-shadow: #7C7C7C 0 0 80rpx;
+        width: 303rpx;
+        height: 422rpx;
+        box-sizing: border-box;
+        border-radius: 10rpx;
+        background-color: #666666; }
       .goods-detail .movie-detail .detail .content {
         overflow-x: hidden;
-        margin-left: 12.5px;
+        margin-left: 40rpx;
         line-height: 1;
         color: #fff; }
         .goods-detail .movie-detail .detail .content > text {
@@ -48,14 +51,23 @@
         .goods-detail .movie-detail .detail .content .title {
           font-size: 36rpx;
           margin-top: 4rpx;
+          margin-bottom: 40rpx;
           overflow: hidden; }
         .goods-detail .movie-detail .detail .content .score {
           font-size: 30rpx;
-          color: #418100;
-          margin-top: 22rpx; }
+          margin-top: 25rpx; }
         .goods-detail .movie-detail .detail .content .time, .goods-detail .movie-detail .detail .content .type, .goods-detail .movie-detail .detail .content .performer {
           font-size: 30rpx;
-          margin-top: 22rpx; }
+          margin-top: 25rpx; }
+        .goods-detail .movie-detail .detail .content .performer {
+          display: -webkit-box;
+          line-height: 40rpx;
+          word-break: break-all;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: 80rpx; }
   .goods-detail .wm-detail-lable {
     width: 750rpx;
     padding: 40rpx;
@@ -103,7 +115,7 @@
     line-height: 50rpx; }
   .goods-detail-sj button {
     width: 108rpx;
-    background-color: #1AAD19;
+    background-color: #418100;
     color: #fff;
     height: 50rpx;
     line-height: 50rpx;

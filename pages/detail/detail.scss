@@ -22,7 +22,7 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-color: #333;
+      background-color: #666666;
     }
     .poster-bg {
       width: 100%;
@@ -30,21 +30,24 @@
       z-index: -1;
       overflow: hidden;
       position: absolute;
-      -webkit-filter: blur(0.3rem);
-      filter: blur(0.3rem);
+      -webkit-filter: blur(0.5rem);
+      filter: blur(0.5rem);
       background-size: cover;
       background-repeat: no-repeat;
       opacity: .55;
     }
     .detail {
       height: rpx(600);
-      padding: rpx(40) rpx(50);
+      padding: rpx(80) rpx(52) rpx(50) rpx(46);
       box-sizing: border-box;
       .poster {
         image {
-          width: rpx(330);
-          height: rpx(460);
+          box-shadow:#7C7C7C 0 0 rpx(80) ;
+          width: rpx(303);
+          height: rpx(422);
           box-sizing: border-box;
+          border-radius: rpx(10);
+          background-color: #666666;
         }
       }
       .content {
@@ -52,22 +55,32 @@
           display: block;
         }
         overflow-x: hidden;
-        margin-left: 12.5px;
+        margin-left: rpx(40);
         line-height: 1;
         color: #fff;
         .title {
           font-size: rpx(36);
           margin-top: rpx(4);
+          margin-bottom: rpx(40);
           overflow: hidden;
         }
         .score {
           font-size: rpx(30);
-          color: #418100;
-          margin-top: rpx(22);
+          margin-top: rpx(25);
         }
         .time, .type, .performer {
           font-size: rpx(30);
-          margin-top: rpx(22);
+          margin-top: rpx(25);
+        }
+        .performer {
+          display: -webkit-box;
+          line-height: rpx(40);
+          word-break: break-all;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          height: rpx(80);
         }
       }
     }
@@ -129,7 +142,7 @@
   }
   button {
     width: rpx(108);
-    background-color: #1AAD19;
+    background-color: #418100;
     color: #fff;
     height: rpx(50);
     line-height: rpx(50);

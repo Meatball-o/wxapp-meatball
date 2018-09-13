@@ -17,7 +17,7 @@
     </navigator>
     <navigator class="cf business ui-border-b" url="/pages/business/business" hover-class="none">
       <text class="iconfont icon-shangjia"></text>
-      关于商家
+      关于我们
       <text class="iconfont icon-youjiantou1  rt"></text>
     </navigator>
     <navigator class="cf feedback" url="/pages/feedback/feedback" hover-class="none">

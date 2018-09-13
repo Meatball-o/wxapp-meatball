@@ -1,4 +1,4 @@
-<view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;background-color: #f6f6f6;" class="mb-list" >
+<view scroll-y bindscrolltolower="requestData" lower-threshold="100" style="height:100%;background-color: #fff;" class="mb-list" >
   <view class="index-head">
     <navigator class="index-head-txt" url="/pages/search/search" hover-class="none">
       <text class="iconfont icon-sousuo"></text>
@@ -19,7 +19,7 @@
   <view class="index-list">
     <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
           hover-class="none" bindtap="jumpDetail" wx:key="index">
-      <text class="iconfont icon-new2 lf"></text>
+      <text class="iconfont icon-hot2 lf"></text>
       <text class="index-list-title hidden lf">{{index+1}}. {{item.title}}</text>
       <text class="index-list-score rt">{{item.score}}</text>
     </view>

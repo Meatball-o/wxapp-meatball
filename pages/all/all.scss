@@ -2,22 +2,26 @@
 
 .index-head {
   width: rpx(750);
-  height: rpx(84);
-  padding: rpx(12);
-  box-sizing: border-box;
+  height: rpx(82);
+  background-color: #eee;
+  position: relative;
   .index-head-txt {
-    width: 100%;
+    position: absolute;
+    top: rpx(11);
+    left: rpx(10);
+    width: rpx(730);
     background-color: #fff;
     height: rpx(60);
-    line-height: rpx(64);
-    border-radius: rpx(5);
+    line-height: rpx(60);
+    border-radius: rpx(6);
     text-align: center;
     color: #888;
     .iconfont {
       position: absolute;
-      left: rpx(216);
-      top: rpx(12);
+      left: rpx(200);
+      top: rpx(2);
       font-size: rpx(36);
+      font-weight: bold;
     }
   }
 }
@@ -28,6 +32,44 @@
     width: rpx(750);
     height: rpx(300);
   }
+}
+
+.goods-title {
+  height: rpx(80);
+  line-height: rpx(80);
+  width: rpx(750);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+  .toggle-list {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+    font-size: rpx(30);
+    height: rpx(80);
+    line-height: rpx(80);
+    position: relative;
+    .iconfont {
+      font-size: rpx(24);
+      position: absolute;
+      top: rpx(-8);
+      right: rpx(127);
+    }
+  }
+}
+
+.goods-title .toggle-list .iconfont {
+  color: #333;
+}
+
+.goods-title .toggle-list.up, .goods-title .toggle-list.up .icon-zhcc_xiangshangjiantou:before {
+  color: #418100;
+}
+
+.goods-title .toggle-list.down, .goods-title .toggle-list.down .icon-zhcc_xiangxiajiantou:before {
+  color: #418100;
 }
 
 .mb-list-toggle {
@@ -43,7 +85,7 @@
   }
   .time {
     .active {
-      color: red;
+      color: #418100;
       position: relative;
     }
     .iconfont {
@@ -60,11 +102,12 @@
   box-sizing: border-box;
   padding: 0 rpx(30);
   .index-list-con {
+    height: rpx(80);
+    line-height: rpx(82);
+    background-color: #fff;
+    box-shadow: 0 rpx(12) rpx(50) #ccc;
     width: rpx(690);
     box-sizing: border-box;
-    height: rpx(72);
-    line-height: rpx(72);
-    background-color: #fff;
     margin: rpx(20) 0 0 0;
     padding: 0 rpx(16);
     border-radius: rpx(8);
@@ -72,7 +115,7 @@
       margin-bottom: rpx(20);
     }
     .iconfont {
-      color: red;
+      color: #418100;
       padding-right: rpx(12);
     }
   }
@@ -81,7 +124,7 @@
 .index-list-score {
   font-size: rpx(30);
   font-weight: bold;
-  color: red;
+  color: #418100;
 }
 
 .index-list-title {

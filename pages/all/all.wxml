@@ -11,19 +11,28 @@
       <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
       <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
     </text>
+    <view class="index-list">
+      <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
+            hover-class="none" bindtap="jumpDetail" wx:key="index">
+        <text class="iconfont icon-qianseban- lf"></text>
+        <text class="index-list-title hidden lf">{{index+1}}. {{item.title}}</text>
+        <text class="index-list-score rt">{{item.score}}</text>
+      </view>
+    </view>
     <text class="toggle-list py-xl {{date==null?'':(date?'up':'down')}}" data-type="date" bindtap="toggleListActive">最新
       <text class="iconfont icon-zhcc_xiangshangjiantou"></text>
       <text class="iconfont icon-zhcc_xiangxiajiantou" style=" top:8rpx;"></text>
     </text>
-  </view>
-  <view class="index-list">
-    <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
-          hover-class="none" bindtap="jumpDetail" wx:key="index">
-      <text class="iconfont icon-new2 lf"></text>
-      <text class="index-list-title hidden lf">{{index+1}}. {{item.title}}</text>
-      <text class="index-list-score rt">{{item.score}}</text>
+    <view class="index-list">
+      <view class="index-list-con cf" wx:for="{{content}}" data-url="/pages/detail/detail" data-item="{{item}}"
+            hover-class="none" bindtap="jumpDetail" wx:key="index">
+        <text class="iconfont icon-new2 lf"></text>
+        <text class="index-list-title hidden lf">{{index+1}}. {{item.title}}</text>
+        <text class="index-list-score rt">{{item.score}}</text>
+      </view>
     </view>
   </view>
+
   <view class="footer-border ui-border-b"></view>
   <view class="index-loading" wx:if="{{loading}}">正在加载...</view>
   <view class="index-loading" wx:if="{{!loading&&loaded===true}}">没有更多数据了...</view>
